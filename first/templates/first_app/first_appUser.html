@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/first.css"%}">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div class="container">
+      <h1>please sign up here</h1>
+      <form  method="POST">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" name="" class="btn btn-primary" value="submit">
+      </form>
+  </div>
+  </body>
+</html>
